@@ -8,7 +8,7 @@ provider "aws" {
 
 resource "aws_elb" "web-elb" {
 
-  name = "simple-web-elb"
+  name = "stelligent-web-elb"
 
 
 
@@ -52,7 +52,7 @@ resource "aws_autoscaling_group" "web-asg" {
 
   availability_zones   = ["${split(",", var.availability_zones)}"]
 
-  name                 = "simple-web-asg-${aws_launch_configuration.web-lc.name}"
+  name                 = "stelligent-web-asg-${aws_launch_configuration.web-lc.name}"
 
   max_size             = "${var.asg_max}"
 
@@ -90,7 +90,7 @@ resource "aws_autoscaling_group" "web-asg" {
 
 resource "aws_launch_configuration" "web-lc" {
 
-  name_prefix          = "simple-web-lc-"
+  name_prefix          = "stelligent-web-lc-"
 
   image_id      = "${var.ami}"
 
@@ -114,7 +114,7 @@ resource "aws_launch_configuration" "web-lc" {
 
 resource "aws_security_group" "simple" {
 
-  name        = "simple_static_webpage"
+  name        = "stelligent_static_webpage"
 
   description = "Allow port 80 inbound"
 

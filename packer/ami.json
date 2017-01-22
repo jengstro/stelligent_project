@@ -1,71 +1,38 @@
 {
 
   "variables": {
-
     "aws_access_key": "",
-
     "aws_secret_key": "",
-
-    "source_ami": "ami-2a34e94a",
-
+    "source_ami": "ami-5b6dde3b",
     "name": "stelligent_mini_project"
-
   },
 
   "builders": [{
-
     "type": "amazon-ebs",
-
     "access_key": "{{user `aws_access_key`}}",
-
     "secret_key": "{{user `aws_secret_key`}}",
-
     "region": "us-west-2",
-
     "source_ami": "{{user `source_ami`}}",
-
     "instance_type": "t2.micro",
-
     "security_group_id": "",
-
     "ami_name": "{{user `name`}}_{{timestamp}}",
-
-    "ssh_username": "admin"
-
+    "ssh_username": "ec2-user",
+    "ssh_pty" : true
   }],
 
   "provisioners" : [
 
     { 
-
       "type": "shell",
-
       "inline": [
-
-        "sudo apt-get update",
-
-        "sudo apt-get -y install curl",
-
-        "curl -L https://omnitruck.chef.io/install.sh | sudo bash"
-
+        "sleep 10",
+        "sudo yum update -y",
+        "sudo yum install puppet -y"
       ]
-
     },
-
-    { 
-
-      "type": "chef-solo",
-
-      "cookbook_paths": ["../", "../vendor"],
-
-      "run_list": [
-
-        "simple_nginx_site::static_webpage"
-
-      ]
-
+    {
+      "type": "puppet-masterless",
+      "manifest_file": "../manifests/site.pp"
     }
-
   ]
-
 }
