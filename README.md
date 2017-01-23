@@ -1,3 +1,5 @@
+[![Build Status](https://img.shields.io/travis/jengstro/stelligent_project.svg)](https://travis-ci.org/jengstro/stelligent_project)
+
 Stelligent Mini Project
 
 ## Description
