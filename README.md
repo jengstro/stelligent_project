@@ -6,14 +6,18 @@ Stelligent Mini Project
 
 Installs/configures nginx and deploys a static index.html file via Puppet.
 
+## Testing
+You can run specs in  this module with rspec:
+
+     bundle install
+     bundle exec rake spec
+
 ## Building a new artifact
 
 Use packer to generate a new AMI.
 
-```shell
-cd packer
-packer build ami.json
-```
+     cd packer
+     packer build ami.json
 
 Update the AMI to the latest in ami.txt.
 
@@ -21,8 +25,6 @@ Update the AMI to the latest in ami.txt.
 
 Use terraform to deploy the latest AMI to AWS.
 
-```shell
-cd terraform
-terraform plan -var "ami=`cat ../packer/ami.txt`"
-terraform apply -var "ami=`cat ../packer/ami.txt`"
-```
+     cd terraform
+     terraform plan -var "ami=`cat ../packer/ami.txt`"
+     terraform apply -var "ami=`cat ../packer/ami.txt`"
