@@ -1,0 +1,45 @@
+{
+  "name": "jengstro-rbenv",
+  "version": "2.2.0",
+  "source": "https://github.com/jengstro/stelligent_project",
+  "author": "Jeff Engstrom",
+  "license": "Apache-2.0",
+  "summary": "Setup rbenv ruby manager for systemwide use",
+  "description": "Setup rbenv ruby manager for systemwide use",
+  "project_page": "https://github.com/jengstro/stelligent_project",
+  "source": "https://github.com/jengstro/stelligent_project.git",
+  "issues_url": "https://github.com/jengstro/stelligent_project/issues",
+  "dependencies": [
+    { "name": "puppetlabs/stdlib", "version_requirement": ">=4.1.0 <5.0.0" }
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [ "5", "6", "7" ]
+    },
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [ "5", "6", "7" ]
+    },
+    {
+      "operatingsystem": "OracleLinux",
+      "operatingsystemrelease": [ "5", "6", "7" ]
+    },
+    {
+      "operatingsystem": "Scientific",
+      "operatingsystemrelease": [ "5", "6", "7" ]
+    },
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [ "6", "7" ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [ "10.04", "12.04", "14.04" ]
+    }
+  ],
+  "requirements": [
+    { "name": "pe", "version_requirement": ">=3.0.0" },
+    { "name": "puppet", "version_requirement": ">=3.0.0" }
+  ]
+}

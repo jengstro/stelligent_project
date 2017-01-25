@@ -1,3 +1,9 @@
 Gemfile.lock
-.rspec
-.ruby-version
+*.swp
+.librarian/
+.tmp/
+.vagrant
+modules/
+pkg/*
+spec/fixtures/manifests/
+spec/fixtures/modules/
