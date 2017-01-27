@@ -1,0 +1,2 @@
+source ./set_env_vars
+terraform apply -var "ami=`cat ../packer/ami.txt`"
