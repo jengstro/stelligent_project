@@ -18,8 +18,7 @@ Ruby 1.9.3-p194
 
 ## Prerequisites
 
-EC2 key pair
-route53 hosted zone
+AWS EC2 key pair and a route53 hosted zone.
 
 packer - https://www.packer.io/intro/getting-started/setup.html
 
