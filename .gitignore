@@ -3,3 +3,4 @@ Gemfile.lock
 spec/fixtures/manifests/
 spec/fixtures/modules/
 packer/output.txt
+terraform/terraform.tfstate*

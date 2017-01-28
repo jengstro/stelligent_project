@@ -1,0 +1,14 @@
+#!/bin/bash
+
+p_dir=./packer
+t_dir=./terraform
+
+# Build AMI
+cd $p_dir
+./build_ami
+cd ..
+
+# Bring up stack
+cd $t_dir
+./init_stack $1 $2 $3
+cd ..

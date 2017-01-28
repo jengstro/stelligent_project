@@ -1,0 +1,8 @@
+#!/bin/bash
+
+t_dir=./terraform
+
+# Bring down stack
+cd $t_dir
+terraform destroy -force
+cd ..
