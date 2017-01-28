@@ -24,13 +24,24 @@ packer - https://www.packer.io/intro/getting-started/setup.html
 
 terraform - https://www.terraform.io/intro/getting-started/install.html
 
-You will also need to set your AWS credentials.
+You will also need to make sure to set your AWS credentials.  You can do so via environment variables...
 
 ```bash
 export AWS_ACCESS_KEY_ID=XXXXXXXXXXXXXXXXXXXX
 export AWS_SECRET_ACCESS_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 export AWS_REGION=xx-yyyy-0
 ```
+or via the AWS credentials file...
+
+```bash
+vi ~/.aws/credentials
+  [default]
+  output = json
+  region = us-west-2
+  aws_access_key_id = XXXXXXXXXXXXXXXXXXXX
+  aws_secret_access_key = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+```
+
 Note: Terraform doesn't currently support aws cli profiles.  You can read about what they support here...  https://www.terraform.io/docs/providers/aws/
 
 ## Quickstart
