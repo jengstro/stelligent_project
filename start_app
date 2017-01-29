@@ -5,10 +5,10 @@ t_dir=./terraform
 
 # Build AMI
 cd $p_dir
-./build_ami
+./build_ami $4
 cd ..
 
 # Bring up stack
 cd $t_dir
-./init_stack $1 $2 $3
+./init_stack $1 $2 $3 $4
 cd ..

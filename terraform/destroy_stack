@@ -1,1 +1,1 @@
-terraform destroy
+export aws_profile=$4; terraform destroy

@@ -4,5 +4,5 @@ t_dir=./terraform
 
 # Bring down stack
 cd $t_dir
-terraform destroy -force
+export AWS_PROFILE=$1; terraform destroy -force
 cd ..
