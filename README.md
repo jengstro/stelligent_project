@@ -66,8 +66,6 @@ region=us-east-1
 output=text
 ```
 
-Note: Terraform doesn't currently support aws cli profiles.  You can read about what they support here...  https://www.terraform.io/docs/providers/aws/
-
 ## Quickstart
 
 This is the fastest way to a running web app.  This script will create an AMI and launch the app cluster.
