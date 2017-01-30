@@ -70,9 +70,11 @@ output=text
 
 This is the fastest way to a running web app.  This script will create an AMI and launch the app cluster.
 
+```bash
   git clone https://github.com/jengstro/stelligent_project.git
   cd stelligent_project
   ./start_app "YOUR_KEY_PAIR" "YOUR_HOSTED_ZONE_ID" "YOUR_DNS_NAME" "YOUR_AWS_PROFILE"
+```
 
 ## Building a new artifact
 
